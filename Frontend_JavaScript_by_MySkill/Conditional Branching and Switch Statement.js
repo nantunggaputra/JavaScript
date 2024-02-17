@@ -2,7 +2,7 @@
 let age = 10;
 var identityCardAllowed = age >= 17 ? true : false; // detailed version
 console.log(identityCardAllowed);
-var identityCardAllowed = age >= 17; // short-hand version
+var identityCardAllowed = age >= 17; // shorted version
 console.log(identityCardAllowed);
 
 // boolean conversion
