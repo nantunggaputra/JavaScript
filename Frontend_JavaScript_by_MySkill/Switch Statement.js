@@ -44,3 +44,36 @@ switch (new Date().getDay()) {
   default:
     console.log("It's Weekend");
 }
+// without break
+// v Result = greater than 2 greater than 1 greater than 0
+let numb = 3;
+switch (numb) {
+  case 5:
+    console.log("greater than 4");
+  case 4:
+    console.log("greater than 3");
+  case 3:
+    console.log("greater than 2");
+  case 2:
+    console.log("greater than 1");
+  case 1:
+    console.log("greater than 0");
+}
+// ^ Result = greater than 2 greater than 1 greater than 0
+// strict comparison
+let a = 100;
+let b = "100";
+switch (a) {
+  case 100:
+    console.log(`${100} in number type`);
+    break;
+  case 200:
+    console.log(`${200} in number type`);
+    break;
+  case "100":
+    console.log("One Hundred in string type");
+    break;
+  case "200":
+    console.log("Two Hundred in string type");
+    break;
+}
