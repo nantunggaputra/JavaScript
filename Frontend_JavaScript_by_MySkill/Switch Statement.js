@@ -21,6 +21,7 @@ switch (size) {
     console.log("Please select the size!");
 }
 // ^ Result = Medium
+
 // without code block
 switch (new Date().getDay()) {
   case 6:
@@ -32,6 +33,7 @@ switch (new Date().getDay()) {
   default:
     console.log("You Need to work! It's Weekday");
 }
+
 // with code block
 switch (new Date().getDay()) {
   case 1:
@@ -44,6 +46,7 @@ switch (new Date().getDay()) {
   default:
     console.log("It's Weekend");
 }
+
 // without break
 // v Result = greater than 2 greater than 1 greater than 0
 let numb = 3;
@@ -60,6 +63,7 @@ switch (numb) {
     console.log("greater than 0");
 }
 // ^ Result = greater than 2 greater than 1 greater than 0
+
 // strict comparison
 let a = 100;
 let b = "100";
