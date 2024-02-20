@@ -30,13 +30,45 @@ for (let i = 0; i < 10; i++) {
 }
 
 // for loop of
-// example
+// example array
 const numbers = [100, 200, 300];
 for (const number of numbers) {
   console.log(number);
 }
-// example
-const array = ["A", "B", "C", "D", "E", "F"];
+// example array
+const array = ["one", "two", "three", "four", "five", "six", "seven"];
 for (const key of array) {
   console.log(key);
+}
+// example string
+const myName = "Nan";
+for (const character of myName) {
+  console.log(character);
+}
+
+// for loop of & Set
+// example array
+const list = new Set([1, 1, 2, 1, 2, 2, 2, 3, 2, 1, 2, 1, 1, 1]);
+for (const item of list) {
+  console.log(item);
+}
+
+// for loop of & Map
+// example array in array no destruction
+const keyValPairs = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
+for (const pair of keyValPairs) {
+  console.log(pair);
+}
+// example array in array destruction
+const keyValPairs2 = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
+for (const [key, value] of keyValPairs2) {
+  console.log("key = ", key, "| value =", value);
 }
