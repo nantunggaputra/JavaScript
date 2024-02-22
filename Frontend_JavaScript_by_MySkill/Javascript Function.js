@@ -60,3 +60,12 @@ if (checkAge(age)) {
   console.log("Not Allowed");
 }
 // ^ example with return value
+// v example without return value
+function showJob(age) {
+  if (!checkAge(age)) {
+    return;
+  }
+  console.log("Showing you the joblist:");
+}
+showJob(age);
+// ^ example without return value
