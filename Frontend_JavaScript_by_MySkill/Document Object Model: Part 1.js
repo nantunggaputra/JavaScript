@@ -1,17 +1,19 @@
 // HTML DOM
 // example
 const paragraphs = document.querySelectorAll("p");
-// paragraphs[0] is the first <p> element,
-// paragraphs[1] is the second <p> element, etc
-alert(
-  paragraphs[0].nodeName +
-    " Hello World! This is the example of alert using HTML DOM"
-);
+// // paragraphs[0] is the first <p> element,
+// // paragraphs[1] is the second <p> element, etc
+// alert(
+//   paragraphs[0].nodeName +
+//     " Hello World! This is the example of alert using HTML DOM"
+// );
 
 // call an url & document
 let urlOfTheWeb = document.URL;
-console.log(urlOfTheWeb + " Hello World! This is the example of HTML DOM");
+console.log("Hello World! This is the example of HTML DOM call an url :");
+console.log(urlOfTheWeb);
 let treeOfTheWeb = document;
+console.log("This is the example of HTML DOM call a document :");
 console.log(treeOfTheWeb);
 
 // selector elements
@@ -19,3 +21,39 @@ console.log(treeOfTheWeb);
 // element.attribute = new value // is used to change the attribute value of an element
 // element.style.property = new style // is used to change the style of an element
 // element.setAttribute(attribute, value) // is used to change the attribute of an element
+
+// get element by id
+const elementIntroduction = document.getElementById("introduction");
+const elementIntroductionNothing = document.getElementById("nointroduction");
+// what is in the id
+console.log("what is in the id :");
+console.log(elementIntroduction);
+// add element from id="introduction" into element which id="demonstration"
+document.getElementById("demonstration").innerHTML =
+  "The text from the introduction nothing paragraph is: " +
+  elementIntroduction.innerHTML;
+// // if no element which id="nointroduction"
+// document.getElementById("demonstration").innerHTML =
+//   "The text from the introduction paragraph is: " +
+//   elementIntroductionNothing.innerHTML;
+// // Result = Uncaught TypeError: elementIntroductionNothing is null
+
+// get elements by class
+const elementIntroductionClass =
+  document.getElementsByClassName("introduction_class");
+// what is in the class
+console.log("what is in the class :");
+console.log(elementIntroductionClass);
+// add element from first class="introduction_class" into element which id="demonstration_class_first"
+document.getElementById("demonstration_class_first").innerHTML =
+  "The text from the first introduction_class paragraph is: " +
+  elementIntroductionClass[0].innerHTML;
+// add element from second class="introduction_class" into element which id="demonstration_class_second"
+document.getElementById("demonstration_class_second").innerHTML =
+  "The text from the second introduction_class paragraph is: " +
+  elementIntroductionClass[1].innerHTML;
+// // if no third class which class="introduction_class"
+// document.getElementById("demonstration_class_second").innerHTML =
+//   "The text from the third introduction_class paragraph is: " +
+//   elementIntroductionClass[2].innerHTML;
+// // Result = Uncaught TypeError: elementIntroductionClass[2] is undefined
