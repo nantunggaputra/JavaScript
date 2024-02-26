@@ -46,3 +46,16 @@ function addWater() {
 	currentUl = document.getElementById("makecoffee");
 	currentUl.appendChild(liWater);
 }
+
+// style property
+// example
+function changeBgColor() {
+	document.getElementById("makecoffee").style.textDecoration = "italic";
+	document.getElementById("makecoffee").style.backgroundColor = "brown";
+	document.getElementById("makecoffee").style.color = "white";
+}
+// example
+function showTheStyle() {
+	var x = document.getElementsByTagName("style")[0];
+	document.getElementById("style").innerHTML = x.innerHTML;
+}
