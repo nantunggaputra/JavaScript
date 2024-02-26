@@ -8,6 +8,7 @@
 			body {
 				margin: 0;
 				padding: 15px;
+				background-color: rgb(255, 240, 220);
 				color: black;
 			}
 		</style>
@@ -54,7 +55,7 @@
 		<div id="container">The text above has been created dynamically using <b>HTML DOM</b> method.</div>
 
 		<h3>8th paragraph</h3>
-		<p style="display: inline">Click the button to appear an item before the list!</p>
+		<p style="display: inline">Click the button to appear a title before the list!</p>
 		<button onclick="addTitle()">Try it!</button>
 		<ul id="makecoffee">
 			<li>Coffee</li>
@@ -65,9 +66,16 @@
 		<br />
 		<p style="display: inline">Click the button to change the background color of the list!</p>
 		<button onclick="changeBgColor()">Try it!</button>
+		<br />
 		<p id="style"></p>
 		<p style="display: inline">Click the button to see what is in the style tag name!</p>
 		<button onclick="showTheStyle()">Try it!</button>
+
+		<h3>9th paragraph</h3>
+		<p id="sum" style="font-weight: bold"></p>
+		<p id="alert-complete"></p>
+		<p style="display: inline">Click the button to see alert!</p>
+		<button id="alert">Try it!</button>
 
 		<script src="Document Object Model: Part 1.js"></script>
 		<script src="Document Object Model: Part 2.js"></script>

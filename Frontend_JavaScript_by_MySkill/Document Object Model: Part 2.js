@@ -50,12 +50,30 @@ function addWater() {
 // style property
 // example
 function changeBgColor() {
-	document.getElementById("makecoffee").style.textDecoration = "italic";
-	document.getElementById("makecoffee").style.backgroundColor = "brown";
-	document.getElementById("makecoffee").style.color = "white";
+	document.getElementById("makecoffee").style.textDecoration = "underline";
+	document.getElementById("makecoffee").style.backgroundColor = "burlywood";
 }
 // example
 function showTheStyle() {
 	var x = document.getElementsByTagName("style")[0];
 	document.getElementById("style").innerHTML = x.innerHTML;
+}
+
+// addEventListener
+let alertId = document.getElementById("alert");
+// example
+alertId.addEventListener("click", alertFunction);
+alertId.addEventListener("click", innerHTMLFunction);
+function alertFunction() {
+	alert("This alert using addEventListener method.");
+}
+function innerHTMLFunction() {
+	document.getElementById("alert-complete").innerHTML = "Your alert has been showed up!";
+}
+// example
+alertId.addEventListener("click", function () {
+	sumFunction(10, 10);
+});
+function sumFunction(a, b) {
+	document.getElementById("sum").innerHTML = `${a * b}!`;
 }
