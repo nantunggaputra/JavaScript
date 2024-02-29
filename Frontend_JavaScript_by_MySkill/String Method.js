@@ -38,3 +38,43 @@ console.log(message.substr(7, 1)) // '
 console.log(message.substr(7)) // '
 
 // string replace
+// example sensitive case
+let newMessage = message.replace('Select', 'Your')
+console.log(newMessage) // Your 'Mission's' level :
+newMessage = message.replace('seLect', 'Your')
+console.log(newMessage) // Select 'Mission's' level :
+// example unsensitive case
+newMessage = message.replace(/seLect/i, 'Your')
+console.log(newMessage) // Your 'Mission's' level :
+// example using global case but sensitive case
+let newSentence = sentence.replace(/wE aRe/g, "She is")
+console.log(newSentence) // Hello World! We are "Family"! We are Fairy Tail!
+newSentence = sentence.replace(/We are/g, "She is")
+console.log(newSentence) // Hello World! She is "Family"! She is Fairy Tail!
+// example not using global case
+newSentence = sentence.replace("We are", "She is")
+console.log(newSentence) // Hello World! She is "Family"! We are Fairy Tail!
+
+// string toUpperCase & toLowerCase
+console.log(newMessage.toUpperCase()) // YOUR 'MISSION'S' LEVEL :
+console.log(newMessage.toLowerCase().replace(/your/i, 'my')) // my 'mission's' level :
+
+// string concat
+// example
+// Hello World! We are "Family"! We are Fairy Tail!
+// Select 'Mission's' level :
+let sentenceAndMessage = sentence.concat("\n", message)
+console.log(sentenceAndMessage)
+// example
+// Hello World! We are "Family"! We are Fairy Tail! Select 'Mission's' level :
+sentenceAndMessage = sentence.concat(" ", message)
+console.log(sentenceAndMessage)
+sentenceAndMessage = sentence + " " + message
+console.log(sentenceAndMessage)
+
+// string trim
+let text1 = "       Hello World!           "
+let text2 = "2024"
+console.log(text1.concat(" ", text2)) //        Hello World!            2024
+text1 = text1.trim()
+console.log(text1.concat(" ", text2)) // Hello World! 2024
