@@ -78,3 +78,24 @@ let text2 = "2024"
 console.log(text1.concat(" ", text2)) //        Hello World!            2024
 text1 = text1.trim()
 console.log(text1.concat(" ", text2)) // Hello World! 2024
+
+// string search
+// example indexOf "Hello World! We are "Family"! We are Fairy Tail!"
+console.log(sentence.indexOf("We")) // 13
+console.log(sentence.indexOf("we")) // -1
+console.log(sentence.indexOf("Natsu")) // -1
+// example lastIndexOf "Hello World! We are "Family"! We are Fairy Tail!"
+console.log(sentence.lastIndexOf("We")) // 30
+console.log(sentence.lastIndexOf("we")) // -1
+console.log(sentence.lastIndexOf("Lucy")) // -1
+// example search "Hello World! We are "Family"! We are Fairy Tail!"
+console.log(sentence.search("We")) // 13
+console.log(sentence.search("we")) // -1
+// example includes "Hello World! We are "Family"! We are Fairy Tail!"
+console.log(sentence.includes("We")) // true
+console.log(sentence.includes("we")) // false
+// example startsWith "Hello World! We are "Family"! We are Fairy Tail!"
+console.log(sentence.startsWith("Hello")) // true
+console.log(sentence.startsWith("hello")) // false
+console.log(sentence.startsWith("H")) // true
+console.log(sentence.startsWith("h")) // false
