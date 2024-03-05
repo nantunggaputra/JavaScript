@@ -51,4 +51,20 @@ console.log(everyScoreIsGreatestScore); // false
 const someScoreIsGreatestScore = finalScore.some(mapIterationFunction3);
 console.log(someScoreIsGreatestScore); // true
 
+// example find()
+const firstNumberOfGreatestFinalScore = finalScore.find(mapIterationFunction4);
+function mapIterationFunction4(value) {
+	return value > 90;
+}
+console.log(firstNumberOfGreatestFinalScore); // 95
+
 // example indexOf()
+let fruits = ["Apple", "Orange", "Mango"];
+let positionMango = fruits.indexOf("Mango");
+console.log(positionMango); // 2
+let positionmango = fruits.indexOf("mango");
+console.log(positionmango); // -1
+positionmango = fruits.indexOf(/mango/i);
+console.log(positionmango); // -1
+let positionPear = fruits.indexOf("Pear");
+console.log(positionPear); // -1
