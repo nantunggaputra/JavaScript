@@ -68,3 +68,54 @@ positionmango = fruits.indexOf(/mango/i);
 console.log(positionmango); // -1
 let positionPear = fruits.indexOf("Pear");
 console.log(positionPear); // -1
+
+// regular expression
+
+// syntax = /"pattern"/"modifiers"
+
+// example of search(/myskill/i) ("myskill" is the search pattern, and "i" modify to case-insensitive)
+let text = "Let's Visit MySkill to upgrade MySkill & YourSkill";
+var regex = text.search("myskill");
+console.log(regex); // -1
+var regex = text.search(/myskill/i);
+console.log(regex); // 12
+
+// example of match(/MySkill/g) ("myskill" is the search pattern, and "g" modify to global match or all search pattern founded)
+var regex = text.match(/myskill/g);
+console.log(regex); // null
+var regex = text.match(/MySkill/g);
+console.log(regex); // ['MySkill', 'MySkill']
+
+// example of match(/MySkill/m) ("myskill" is the search pattern, and "m" modify to one match or first search pattern founded)
+text = "Let's\nVisit MySkill\nto upgrade MySkill & YourSkill";
+var regex = text.match(/MySkill/m);
+console.log(regex); // ['MySkill', index: 12, input: 'Let's Visit MySkill to upgrade MySkill & YourSkill', groups: undefined]
+
+// example of test (to output true or false if there is the search pattern in the test variable)
+var regex = /LL/i;
+console.log(regex.test(text)); // true
+var regex = /LL/;
+console.log(regex.test(text)); // false
+var regex = /ll/;
+console.log(regex.test(text)); // true
+var regex = /zzz/;
+console.log(regex.test(text)); // false
+var regex = /[a-zA-Z]/;
+console.log(regex.test(text)); // true
+var regex = /[0-9]/;
+console.log(regex.test(text)); // false
+var regex = /[A-Z|0-9]/;
+console.log(regex.test(text)); // true
+const passwordRules = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9!@#$]){6,20}/g;
+var userPassword = "whoami";
+console.log(passwordRules.test(userPassword)); // false
+var userPassword = "whoAmI#myname@2024";
+console.log(passwordRules.test(userPassword)); // true
+var userPassword = "whoami#myname@2024";
+console.log(passwordRules.test(userPassword)); // false
+var userPassword = "WhoAmImyname2024";
+console.log(passwordRules.test(userPassword)); // true
+var userPassword = "WhoAmImyname2024morethan20characters";
+console.log(passwordRules.test(userPassword)); // false
+
+// example of metacharacter
