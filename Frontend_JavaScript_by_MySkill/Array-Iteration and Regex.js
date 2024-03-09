@@ -119,3 +119,20 @@ var userPassword = "WhoAmImyname2024morethan20characters";
 console.log(passwordRules.test(userPassword)); // false
 
 // example of metacharacter
+// 0-9
+// a-z
+// A-Z
+// . find a single character
+// \w find a word character
+// \W find a non-word
+// \d find a digit character
+// \D find a non-digit
+// \s find a non space character
+// \S find a non whitespace
+// \b find a match at the beginning or end of a word, example find "SE" use \bSE or SE\b
+// \B find a match but not at the beginning or end of a word
+// \0 find a NULL character
+// \n find a new line character
+// \f find a form feed character
+// \r find a carriage return character
+// \t find a tab character
