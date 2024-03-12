@@ -59,3 +59,33 @@ dateFormat = new Date("31 JANua 2025");
 console.log(dateFormat); // Fri Jan 31 2025 00:00:00 GMT+0700 (Western Indonesia Time)
 dateFormat = new Date("31, Januari, 2025");
 console.log(dateFormat); // Fri Jan 31 2025 00:00:00 GMT+0700 (Western Indonesia Time)
+
+// example get Date
+
+// example getTime()
+console.log(d.getTime()); // this miliseconds from Jan 01 1970 07:00:00 / 1710236044671
+
+// example getDate()
+console.log(d.getDay()); // this day / 2 from index 0
+console.log(d.getDate()); // this date / 12
+console.log(d.getMonth()); // this month / 2 from index 0
+console.log(d.getFullYear()); // this year / 2024
+
+// example how to rename the day
+const hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"];
+let hariIni = hari[d.getDay()];
+console.log(hariIni); // this day / Selasa
+
+// example set Date
+
+// example setTime
+d.setFullYear(2020);
+console.log(d); // set the date but the year from 2020
+d.setHours(23);
+console.log(d); // set the date but the hour from 23 from index 0
+d.setMinutes(59);
+console.log(d); // set the date but the minutes from 59 from index 0
+
+// example setFullYear
+d.setTime(1000000000000);
+console.log(d); // set the date from Jan 01 1970 07:00:00 + 1000000000000 miliseconds
