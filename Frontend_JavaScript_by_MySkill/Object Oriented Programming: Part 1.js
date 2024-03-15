@@ -45,8 +45,7 @@ console.log(personFive.age5); // 20
 
 // example create function with this.
 function AnotherPerson() {
-	this.name = "Ali";
-	this.age = 21;
+	(this.name = "Ali"), (this.age = 21);
 }
 const personFour = new AnotherPerson();
 console.log(personFour.age); // 21
@@ -66,8 +65,7 @@ console.log(personSix.age); // 22
 
 // // example error
 // const MyPerson = () => {
-// 	this.name = "Abu";
-// 	this.age = 22;
+// 	(this.name = "Abu"), (this.age = 22);
 // 	return {
 // 		name,
 // 		age,
@@ -77,3 +75,28 @@ console.log(personSix.age); // 22
 // console.log(personSix.age); // Uncaught ReferenceError ReferenceError: name is not defined
 
 // Class Instructor
+
+// example
+class ThePerson {
+	constructor() {
+		(this.name = "Imam"), (this.age = 23);
+	}
+}
+const personZero = new ThePerson();
+console.log(personZero); // ThePerson {name: 'Imam', age: 23}
+
+// Constructor Syntax
+
+// example
+class ThisPerson {
+	constructor(newName, newAge) {
+		(this.name = newName), (this.age = newAge);
+	}
+}
+const personSeven = new ThisPerson("Imam", 23);
+console.log(personSeven); // ThisPerson {name: 'Imam', age: 23}
+console.log(personSeven.age); // 23
+const personEight = new ThisPerson("Syekh", 24);
+console.log(personEight.age); // 24
+const personNine = new ThisPerson("Gus", 25);
+console.log(personNine.age); // 25
