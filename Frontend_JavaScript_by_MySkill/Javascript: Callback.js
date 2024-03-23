@@ -45,3 +45,27 @@ const processUserInput4 = (callback) => {
 	callback(age);
 };
 processUserInput4((age) => (age >= 18 && age <= 100 ? alert("OK! You're " + age + " years old.") : window.close("", "_parent", "")));
+
+// Why Callback
+// support asynchronous
+// function customization
+
+// example
+let list = ["celana", "sabuk", "alas kaki", "baju"];
+list.sort();
+console.log(list); // ['alas kaki', 'baju', 'celana', 'sabuk']
+let numb = [1, 30, 4, 21, 100000];
+numb.sort();
+console.log(numb); // [1, 100000, 21, 30, 4]
+
+// example function customization using callback
+function compareNumber(a, b) {
+	return a - b;
+}
+numb.sort(compareNumber);
+console.log(numb); // [1, 4, 21, 30, 100000]
+
+// example function customization using callback
+let point = [200, 9, 120, 45, 90, 20, 60, 10];
+point.sort((a, b) => a - b);
+console.log(point); // [9, 10, 20, 45, 60, 90, 120, 200]
