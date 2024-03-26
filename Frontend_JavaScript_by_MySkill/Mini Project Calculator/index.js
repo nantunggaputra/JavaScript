@@ -27,7 +27,7 @@ numbers.forEach((number) => {
 		console.log(e.target.innerText);
 		// display input
 		dis2Num += e.target.innerText;
-		if (dis2Num.length > 9) {
+		if (dis2Num.length > 10) {
 			dis2Num = parseFloat(dis2Num).toExponential(3);
 		} else {
 			dis2Num = parseFloat(dis2Num);
@@ -48,7 +48,7 @@ operations.forEach((operation) => {
 		if (dis1Num && dis2Num && lastOperation) {
 			mathOperation();
 		} else {
-			if (dis2Num.length > 7) {
+			if (dis2Num.length > 8) {
 				result = parseFloat(dis2Num).toExponential(3);
 			} else {
 				result = parseFloat(dis2Num);
@@ -61,7 +61,7 @@ operations.forEach((operation) => {
 
 // clearVar function
 function clearVar(name = "") {
-	if (displayHistory.innerText.length > 25) {
+	if (displayHistory.innerText.length > 20) {
 		displayHistory.innerText = "";
 		dis1Num = result + " ";
 	} else {
@@ -77,16 +77,15 @@ function clearVar(name = "") {
 function mathOperation() {
 	if (lastOperation === "x") {
 		result = parseFloat(result) * parseFloat(dis2Num);
-		result = result.toExponential(3);
 	} else if (lastOperation === "/") {
 		result = parseFloat(result).toFixed(8) / parseFloat(dis2Num);
 		result = result.toFixed(8);
-		result = result.toExponential(3);
 	} else if (lastOperation === "+") {
 		result = parseFloat(result) + parseFloat(dis2Num);
-		result = result.toExponential(3);
 	} else if (lastOperation === "-") {
 		result = parseFloat(result) - parseFloat(dis2Num);
+	}
+	if (result > 9999999999 || result < -9999999999) {
 		result = result.toExponential(3);
 	}
 }
