@@ -4,19 +4,20 @@
 }
 
 body {
-	background-color: white;
+	background-color: #252525;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
 	margin-top: 30px;
 	margin-bottom: -10px;
+	color: #ffffff;
 	text-align: center;
 }
 
 header h4 {
 	margin-top: 10px;
-	color: gray;
+	color: #a3a3a3;
 }
 
 header a {
@@ -43,7 +44,7 @@ section {
 .display {
 	width: 90%;
 	height: 90px;
-	background-color: lightgray;
+	background-color: #e5e5e5;
 	padding: 20px;
 	font-size: 30px;
 	text-align: right;
@@ -66,10 +67,11 @@ section {
 	opacity: 0.4;
 	position: absolute;
 	left: 0;
+	bottom: 0;
 }
 
 .all_button {
-	color: white;
+	color: #ffffff;
 	display: grid;
 	grid-template: repeat(4, 1fr) / repeat(4, 1fr);
 }
@@ -101,4 +103,16 @@ section {
 
 .button:hover {
 	background-color: #09898c;
+}
+
+footer {
+	margin-top: -10px;
+	margin-bottom: 30px;
+	color: #a3a3a3;
+	text-align: center;
+}
+
+footer a {
+	color: #a3a3a3;
+	text-decoration: none;
 }
