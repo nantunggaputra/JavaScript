@@ -24,7 +24,7 @@ numbers.forEach((number) => {
 		} else if (e.target.innerText === "." && haveDot) {
 			return;
 		}
-		console.log(e.target.innerText);
+		// console.log(e.target.innerText);
 		// display input
 		dis2Num += e.target.innerText;
 		if (dis2Num.length > 10) {
@@ -107,8 +107,10 @@ function mathOperation() {
 	} else if ((result <= 9 && result >= 0) || (result > -9 && result <= -1)) {
 		result = result.toFixed(9);
 	}
+	result = result.toString().replace(/(\.\d*?[1-9])0+$/, "$1");
+	result = parseFloat(result);
 	if (result > 9999999999 || result < -9999999999) {
-		result = result.toExponential(4);
+		result = parseFloat(result).toExponential(4);
 	}
 }
 
@@ -120,7 +122,7 @@ equal.addEventListener("click", () => {
 	clearVar();
 	dis1Num = "";
 	displayHistory.innerText = `\n`;
-	dis2Num = "";
+	dis2Num = result;
 	let equal = result;
 	if (result > 9999999999 || result < -9999999999) {
 		equal = parseFloat(result).toExponential(4);

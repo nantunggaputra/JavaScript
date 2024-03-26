@@ -121,6 +121,10 @@ section {
 	cursor: not-allowed;
 }
 
+.dot:hover {
+	background-color: #737373;
+}
+
 footer {
 	margin-top: -10px;
 	margin-bottom: 30px;
