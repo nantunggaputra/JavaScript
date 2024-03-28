@@ -2,3 +2,19 @@ body {
 	background-color: #252525;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+.blink {
+	animation: blink 2s ease infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.4;
+	}
+}
