@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://unpkg.com/feather-icons"></script>
+		<title>Simple Weather App</title>
+	</head>
+	<body>
+		<section>
+			<!-- Card -->
+			<div class="card m-auto my-10 w-11/12 max-w-lg rounded-2xl bg-gradient-to-b from-sky-800 to-sky-600 px-8 py-10 text-center text-white">
+				<!-- Search_Box -->
+				<div class="search flex w-full items-center justify-between">
+					<input type="text" placeholder="Enter City Name" spellcheck="false" class="mr-4 h-14 flex-[1] rounded-3xl border-none bg-neutral-300 px-6 py-2 text-lg text-neutral-900 outline-none" />
+					<button class="h-14 w-14 cursor-pointer rounded-full border-none bg-neutral-300 outline-none"><i data-feather="search" class="m-auto text-neutral-900"></i></button>
+				</div>
+				<!-- Weather_Display -->
+				<div class="weather">
+					<!-- Weather_Summary -->
+					<p><i data-feather="cloud-rain" class="weather-icon mx-auto mb-10 mt-16 size-44"></i></p>
+					<h1 class="tempt mb-5 text-6xl font-extrabold">27°C</h1>
+					<h2 class="city mb-16 text-xl font-semibold"><i data-feather="map-pin" class="mb-1 mr-2 inline size-6"></i>Tangerang, Kota Tangerang, Banten</h2>
+					<!-- Weather_Details -->
+					<div class="details flex items-center justify-between px-[22px]">
+						<div class="col flex items-center justify-between">
+							<div class="text-right">
+								<p class="humidity text-xl font-semibold">50%</p>
+								<p class="font-medium">Humidity</p>
+							</div>
+							<p><i data-feather="droplet" class="ml-3 size-14"></i></p>
+						</div>
+						<div class="col flex items-center justify-between">
+							<div class="text-right">
+								<p class="wind text-xl font-semibold">15 km/h</p>
+								<p class="font-medium">Wind Speed</p>
+							</div>
+							<p><i data-feather="wind" class="ml-3 size-14"></i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p class="mx-auto mb-10 max-w-lg text-center text-xs font-medium text-sky-600">Created by <a href="https://www.linkedin.com/in/nantungga-putra-451779116/" target="_blank">Nantungga Putra</a> | &copy;2024</p>
+		</footer>
+		<script>
+			feather.replace();
+		</script>
+		<script src="./index.js"></script>
+	</body>
+</html>
