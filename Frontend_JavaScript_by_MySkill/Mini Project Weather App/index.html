@@ -8,43 +8,53 @@
 		<title>Simple Weather App</title>
 	</head>
 	<body>
+		<header>
+			<h1 class="mx-auto mt-10 max-w-lg text-center text-2xl font-bold text-white">Simple Weather App</h1>
+		</header>
 		<section>
 			<!-- Card -->
-			<div class="card mx-auto my-10 w-11/12 max-w-lg rounded-2xl bg-gradient-to-b from-sky-800 to-sky-600 px-8 py-10 text-center text-white">
+			<div class="card mx-auto mb-8 mt-10 w-11/12 max-w-lg rounded-2xl bg-gradient-to-b from-sky-800 to-sky-600 px-8 py-10 text-center text-white">
 				<!-- Search_Box -->
 				<div class="search flex w-full items-center justify-between">
-					<input type="text" placeholder="Enter City Name" spellcheck="false" class="mr-4 h-14 flex-[1] rounded-3xl border-none bg-neutral-300 px-6 py-2 text-lg text-neutral-900 outline-none" />
-					<button class="h-14 w-14 cursor-pointer rounded-full border-none bg-neutral-300 outline-none"><i data-feather="search" class="m-auto text-neutral-900"></i></button>
+					<input type="text" placeholder="Enter City Name" spellcheck="false" class="mr-4 h-14 w-5/6 rounded-[32px] border-none bg-neutral-300 px-6 py-2 text-lg text-neutral-900 outline-none" />
+					<button class="h-14 w-14 cursor-pointer rounded-[32px] border-none bg-neutral-300 outline-none"><i data-feather="search" class="m-auto text-neutral-900"></i></button>
 				</div>
 				<!-- Weather_Display -->
 				<div class="weather hidden">
 					<!-- Weather_Summary -->
-					<img src="./weather/cloud-lightning.svg" class="weather-icon mx-auto mb-10 mt-16 size-44" />
+					<img src="./weather/cloud-lightning.svg" class="weather-icon mx-auto mb-10 mt-14 size-44 md:mt-16" />
 					<h1 class="tempt mb-5 text-6xl font-extrabold">0°C</h1>
-					<i data-feather="map-pin" class="blink mb-1 mr-2 inline size-6"></i>
+					<i data-feather="map-pin" class="mb-1 mr-2 inline size-6"></i>
 					<h2 class="city inline text-xl font-semibold">City</h2>
 					<!-- Weather_Details -->
-					<div class="details mt-16 flex items-center justify-between px-[22px]">
+					<div class="details mt-14 flex items-center justify-between px-[22px] md:mt-16">
 						<div class="col flex items-center justify-between">
 							<div class="text-right">
-								<p class="humidity text-xl font-semibold">0%</p>
-								<p class="font-medium">Humidity</p>
+								<p class="humidity font-semibold md:text-xl">0%</p>
+								<p class="text-sm font-medium md:text-base">Humidity</p>
 							</div>
-							<p><i data-feather="droplet" class="ml-3 size-14"></i></p>
+							<p><i data-feather="droplet" class="ml-3 size-10 md:size-14"></i></p>
 						</div>
 						<div class="col flex items-center justify-between">
 							<div class="text-right">
-								<p class="wind text-xl font-semibold">0.00 km/h</p>
-								<p class="font-medium">Wind Speed</p>
+								<p class="wind font-semibold md:text-xl">0.00 km/h</p>
+								<p class="text-sm font-medium md:text-base">Wind Speed</p>
 							</div>
-							<p><i data-feather="wind" class="ml-3 size-14"></i></p>
+							<p><i data-feather="wind" class="ml-3 size-10 md:size-14"></i></p>
 						</div>
+					</div>
+					<div class="scroll-details mt-8 hidden cursor-pointer"><i data-feather="chevrons-down" class="blink inline"></i><i data-feather="chevrons-down" class="blink inline"></i><i data-feather="chevrons-down" class="blink inline"></i></div>
+					<div class="show-details mt-9 hidden items-center justify-around rounded-2xl border-[3px] border-solid border-white py-4">
+						<div><i data-feather="globe" class="mx-auto p-1"></i><span class="country mx-auto text-xs font-semibold md:text-sm">undefined</span></div>
+						<div><i data-feather="cloud" class="mx-auto p-1"></i><span class="description mx-auto text-xs font-semibold md:text-sm">undefined</span></div>
+						<div><i data-feather="clock" class="mx-auto p-1"></i><span class="timezone mx-auto text-xs font-semibold md:text-sm">NaN</span></div>
+						<div><i data-feather="sunrise" class="mx-auto p-1"></i><span class="sunrise mx-auto text-xs font-semibold md:text-sm">NaN</span></div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<footer>
-			<p class="mx-auto mb-10 max-w-lg text-center text-xs font-medium text-sky-600">Created by <a href="https://www.linkedin.com/in/nantungga-putra-451779116/" target="_blank">Nantungga Putra</a> | &copy;2024</p>
+			<p class="mx-auto mb-8 max-w-lg text-center text-xs font-medium text-sky-600">Created by <a href="https://www.linkedin.com/in/nantungga-putra-451779116/" target="_blank">Nantungga Putra</a> | &copy;2024</p>
 		</footer>
 		<script>
 			feather.replace();
