@@ -17,6 +17,8 @@ const sunrise = document.querySelector(".sunrise");
 const timezone = document.querySelector(".timezone");
 
 // API initiation
+// this API key has been disabled
+// please use your own API key
 const UrlAPI = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const keyAPI = "9731f29d3257cec279a800e494b516cc";
 
